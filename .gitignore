@@ -1,0 +1,79 @@
+# 模型文件
+**/checkpoints/
+*.pth
+*.pt
+*.pkl
+*.h5
+*.onnx
+
+# 图片文件
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.tiff
+*.svg
+
+# 数据集
+**/data/
+**/MNIST/
+*.csv
+*.json
+*.txt
+*.npy
+*.npz
+
+# 日志文件
+*.log
+logs/
+tensorboard_logs/
+
+# Python缓存
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# 虚拟环境
+venv/
+env/
+ENV/
+.venv/
+
+# IDE文件
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 操作系统文件
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# 临时文件
+*.tmp
+*.temp
+temp/
+tmp/ 
