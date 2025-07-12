@@ -37,7 +37,7 @@ class Trainer:
         self.optimizer = optim.Adam(model.parameters(), lr=0.001, weight_decay=1e-4)
         
         # 学习率调度器
-        self.scheduler = optim.lr_scheduler.StepLR(self.optimizer, step_size=5, gamma=0.1)
+        self.scheduler = optim.lr_scheduler.StepLR(self.optimizer, step_size=5, gamma=0.9)
         
         # 训练历史
         self.train_losses = []
