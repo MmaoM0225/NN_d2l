@@ -8,7 +8,7 @@ import numpy as np
 
 class LeNet(nn.Module):
     """
-    LeNet-5 卷积神经网络
+    LeNet卷积神经网络
     
     架构:
     - 输入: 1x28x28 (MNIST图像)
@@ -39,25 +39,33 @@ class LeNet(nn.Module):
         self.fc1 = nn.Linear(16*5*5, 84)
         self.fc2 = nn.Linear(84, num_classes)
 
+        # 原lenet使用平均池化
         #池化层
         self.pool1 = nn.MaxPool2d(kernel_size=2, stride=2)
         self.pool2 = nn.MaxPool2d(kernel_size=2, stride=2)
-        
+        # 原lenet没有dropout层
         # Dropout层（防止过拟合）
         self.dropout = nn.Dropout(0.5)
 
         #展平层
         self.flatten = nn.Flatten()
+        # 原lenet使用sigmoid作为激活函数
+        # 激活函数
+        self.relu = nn.ReLU()
 
         self.net = nn.Sequential(
             self.conv1,
+            self.relu,  # 卷积层后添加激活函数
             self.pool1,
             self.conv2,
+            self.relu,  # 卷积层后添加激活函数
             self.pool2,
             self.flatten,
             self.fc1,
+            self.relu,  # 全连接层后添加激活函数
             self.dropout,
             self.fc2
+            # 注意：输出层前不添加ReLU，因为后续通常会使用softmax或交叉熵损失函数
         )
         
     def forward(self, x):

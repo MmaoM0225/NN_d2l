@@ -6,7 +6,8 @@
 
 ```
 NN_d2l/
-├── LeNet/                    # LeNet-5 卷积神经网络
+├── LeNet/                    # LeNet 卷积神经网络
+├── AlexNet/                    # AlexNet 卷积神经网络
 ├── requirements.txt           # 项目依赖
 └── README.md                 # 项目总说明
 ```
@@ -17,6 +18,11 @@ NN_d2l/
 - **任务**：MNIST手写数字识别
 - **架构**：经典卷积神经网络（LeNet）
 - **预期性能**：98%+ 准确率
+
+### 2. AlexNet
+- **任务**：fashion-MNIST物品识别
+- **架构**：经典卷积神经网络（AlexNet）
+- **预期性能**：90%+ 准确率
 
 ## 环境要求
 
